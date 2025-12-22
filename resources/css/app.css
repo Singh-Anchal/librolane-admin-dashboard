@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Custom Dashboard Styles --- */
+
+/* Google Material Icons Settings */
+.material-symbols-outlined { 
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20; 
+}
+
+/* Smooth Sidebar Transitions */
+#sidebar { 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+#main-content { 
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+/* Desktop Collapsed State Styles */
+.sidebar-collapsed #sidebar { 
+    width: 70px; 
+}
+.sidebar-collapsed #sidebar .nav-text, 
+.sidebar-collapsed #sidebar .sidebar-footer,
+.sidebar-collapsed #sidebar .brand-text,
+.sidebar-collapsed #sidebar .menu-label { 
+    display: none; 
+}
+.sidebar-collapsed #main-content { 
+    margin-left: 70px; 
+}
+/* Center icons when collapsed */
+.sidebar-collapsed #sidebar nav a { 
+    justify-content: center; 
+    padding-left: 0; 
+    padding-right: 0; 
+}
