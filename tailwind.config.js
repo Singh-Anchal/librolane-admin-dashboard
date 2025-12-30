@@ -10,7 +10,7 @@ export default {
       // Your custom Velzon Theme Colors
       colors: {
         "v-dark": "#0a1832",        // Velzon Dark Sidebar
-        "v-primary": "#405189",     // Velzon Primary Blue
+        "v-primary": "#405189",     // Velzon Primary Blue (Matches your Dashboard buttons)
         "v-secondary": "#3577f1",   // Velzon Secondary Blue
         "v-bg": "#f3f3f9",          // Velzon Background
       },
@@ -23,5 +23,21 @@ export default {
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/container-queries'),
+    
+    // Custom plugin to hide scrollbar (for the horizontal tabs)
+    function ({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-hide': {
+          /* IE and Edge */
+          '-ms-overflow-style': 'none',
+          /* Firefox */
+          'scrollbar-width': 'none',
+          /* Safari and Chrome */
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+        },
+      });
+    },
   ],
 }
