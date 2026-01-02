@@ -27,7 +27,7 @@
         <nav class="space-y-1">
 
             <!-- Dashboard -->
-            <a href="{{ url('/dashboard') }}"
+            <a href="{{ url('/') }}"
                 class="flex items-center gap-3 rounded-md bg-white/10 px-3 py-2.5 text-white transition-all">
                 <span class="material-symbols-outlined">dashboard</span>
                 <span class="nav-text text-[13.5px] font-medium">Dashboard</span>
