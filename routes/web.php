@@ -26,7 +26,27 @@ Route::get('/academics', function () {
     return view('academics');
 });
 
+    Route::get('/academic-calender', function () {
+        return view('academic-calender');
+    });
+
+    Route::get('/time-table', function () {
+        return view('time-table');
+    });
+
 Route::get('/finance', function () {
     return view('finance');
 });
+
+Route::get('/communications', function () {
+    return view('communications');
+});
+
+Route::get('/reports', function () {
+    return view('reports');
+});
+Route::get('/settings/security', function () {
+    return view('settings.security');
+});
+
 
